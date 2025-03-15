@@ -672,6 +672,8 @@ font-size: 28px;
 .diva{
     margin-bottom: 100px;
     width: 100%;
+   border-top: solid rgb(202, 199, 18) 2px;
+  border-bottom: solid rgb(202, 199, 18) 2px;
     display: flex;
     justify-items: center;
     align-items: center;
