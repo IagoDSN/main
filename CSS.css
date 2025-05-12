@@ -176,7 +176,7 @@ body{
             display: none;
          }
     }
-    @media (min-width: 860px) and (max-width:1299px){
+    @media (min-width: 1050px) and (max-width:1299px){
         .Home{
             color: rgb(0, 0, 0);
             margin-left: 350px;
@@ -241,7 +241,7 @@ body{
                    display: none;
                 }
             }
-            @media (max-width: 859px){
+            @media (max-width: 1049px){
 
                 .text{
                     display: none;
@@ -354,12 +354,12 @@ body{
     }
 
 
-    @media (min-width: 861px){
+    @media (min-width: 1051px){
         .slideDiv {
             display: none;
           }
     }  
-@media(max-width: 860px) and (min-width: 501px){
+@media(max-width: 1050px) and (min-width: 501px){
     .slideDiv {
         display: flex;
         width: 40vw;
@@ -374,6 +374,7 @@ body{
               flex-direction: column;
               align-items: center;
               transform: translate(100%);
+              margin-top: 50px;
              }
 .mostra {
      transform: translate(0%);
@@ -1154,3 +1155,16 @@ font-size: 28px;
         justify-self: center;
         margin-bottom: -16px;
     }
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 2.5em;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}

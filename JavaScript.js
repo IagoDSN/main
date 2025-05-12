@@ -1,14 +1,17 @@
 function inicial(){
-    window.location.href = 'https://iagodsn.github.io/main/pagina-inicial.html'
+    window.location.href = 'pagina-inicial.html'
 }
 function sobre(){
-    window.location.href = 'https://iagodsn.github.io/main/Downloads.html'
+    window.location.href = 'Downloads.html'
 }
 function contato(){
-    window.location.href = 'https://iagodsn.github.io/main/contato.html'
+    window.location.href = 'contato.html'
 }
 function github(){
     window.open('https://github.com/IagoDSN')
+}
+function insta(){
+    window.open('https://www.instagram.com/iago_sepini/')
 }
 
 function menuas(){
@@ -81,3 +84,49 @@ function menuas(){
   function email(){
     window.location.href='mailto:iagodsnunes@gmail.com?subject=Feedback%20da%20Cafeteria'
   }
+
+
+
+  function estaDentroDoPeriodo(hoje, inicio, fim) {
+    const mesAtual = hoje.getMonth() + 1;
+    const diaAtual = hoje.getDate();
+
+    if ((mesAtual === inicio.mes && diaAtual >= inicio.dia) || (mesAtual === fim.mes && diaAtual <= fim.dia) || (mesAtual > inicio.mes && mesAtual < fim.mes)) {
+        return true;
+    }
+    return false;
+}
+
+window.onload = function() {
+    const hoje = new Date();
+    const inicio = { mes: 12, dia: 10 };
+    const fim = { mes: 1, dia: 2 };
+
+    if (estaDentroDoPeriodo(hoje, inicio, fim)) {
+        setInterval(criarFlocoDeNeve, 300);
+    }
+
+    if (estaDentroDoPeriodo(hoje, inicio, fim)) {
+        document.getElementById("imgPrincipal").src = "imagens/Coragem_natal.png";
+    } else {
+        document.getElementById("imgPrincipal").src = "imagens/courage.ico";
+    }
+};
+
+function criarFlocoDeNeve() {
+    const floco = document.createElement("div");
+    floco.classList.add("snowflake");
+    floco.innerHTML = "❄";
+    document.body.appendChild(floco);
+
+
+    floco.style.left = Math.random() * window.innerWidth + "px";
+    floco.style.animationDuration = (Math.random() * 5 + 5) + "s";
+    floco.style.opacity = Math.random();
+
+    setTimeout(() => {
+        floco.remove();
+    }, 10000);
+}
+
+
