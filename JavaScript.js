@@ -1,5 +1,5 @@
 function inicial(){
-    window.location.href = 'pagina-inicial.html'
+    window.location.href = 'index.html'
 }
 function sobre(){
     window.location.href = 'Downloads.html'
