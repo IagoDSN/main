@@ -1,3 +1,3 @@
 # main
  
- https://iagodsn.github.io/main/pagina-inicial.html
+ https://iagodsn.github.io/main/
